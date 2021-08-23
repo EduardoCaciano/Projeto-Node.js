@@ -1,12 +1,7 @@
-const express = require("express");
+const app = requere("./app")
 
-const app = express();
+app.listen(3333, () => {
 
-app.get("/", (req, res) => {
+    console.log(`Servidor rodando na porta ${3333}`);
 
-    res.send("Hello World Express");
-})
-
-app.listen(3333, () =>{
-    console.log("Servidor rodando na porta 3333")
-})
+});
