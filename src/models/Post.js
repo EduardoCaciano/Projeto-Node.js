@@ -2,21 +2,24 @@ const { Model, DataTypes } = require("sequelize");
 
 
 class Post extends Model {
-    static init(connection) {
-        super.init({
-            title: DataTypes.STRING,
-            descripition: DataTypes.STRING,
-            image: DataTypes.STRING,
-            gist: DataTypes.STRING
-        },
+
+    static init(connetion) {
+        super.init(
             {
-                connection
+                title: DataTypes.STRING,
+                description: DataTypes.STRING,
+                image: DataTypes.STRING,
+                gist: DataTypes.STRING,
+            },
+            {
+                sequelize: connetion,
             }
         )
     }
-    static assoate(crteate) {
 
+    static associate(models) {
+        this.belongsTo(models.User);
     }
 }
-module.exports = Post;
 
+module.exports = Post;

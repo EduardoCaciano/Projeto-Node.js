@@ -1,13 +1,13 @@
 {
-  "name": "senai_overflow_api",
+  "name": "backend",
   "version": "1.0.0",
-  "description": "Senai aplicação para troca de conhecimento",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "nodemon src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Eduardo Caciano",
+  "author": "Italo",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",

@@ -1,7 +1,13 @@
-const routes = requere("express").Router();
+const routes = require("express").Router();
 
-const postController = require("./controllers/posts");
+const postController = require("./Controllers/posts");
+const sessionController = require("./controllers/sessions");
+const userController = require("./controllers/users");
 
-routes.get('/posts', postController.index)
+routes.post('/sessions', sessionController.store);
+
+routes.post('/user', userController.store);
+
+routes.get('/post', postController.index);
 
 module.exports = routes;
